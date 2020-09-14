@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<br />
+{% for product in products.all%}
+<!--#48556D-->
+<br />
+<style>
+    .card 
+  {
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 0rem 1rem 1rem lightgray;
+      border: 1px solid #13232f;
+      color: #13232f
+  }
+</style>
+<div class="parallax">
+    <br />
+    <br />
+    <br />
+
+<div class="card">
+    <div class="col-3" onclick="window.location='{% url 'detail' product.id %}';" style="cursor: pointer;">
+    </div>
+    <div class="col-10" onclick="window.location='{% url 'detail' product.id %}';" style="cursor: pointer;">
+        <h1><font face="Colleged" size="8">{{product.title}}</font></h1>
+        <p><font face="Colleged" size="4">{{product.summary}}</font></p>
+    </div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

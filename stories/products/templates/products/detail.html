@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %} 
+<br/>
+<style>
+  .card 
+  {
+    padding: 40px;
+    display: flex;
+    box-shadow: 0rem 1rem 1rem lightgray;
+    border: 1px solid #13232f;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 60vw
+  }
+  .footer{
+    visibility: hidden;
+  }
+</style>
+<body>
+    <br />
+    <br />
+    <div class="card">
+      <br/>
+      <div class="row">
+        <h4 style="text-decoration: underline;">{{product.title}}</h4>
+      </div>
+      <br/>
+      <div class="row">
+          <p>Current Readers = {{product.viewCount}}</p>&nbsp;&nbsp;
+          <p style="color:#ff1493">(Login to see this go up! )</p>
+      </div>
+      <br/>
+      <div class="row">
+          <p>Total Reads = {{product.viewCount}}</p>&nbsp;&nbsp;
+          <p style="color:#ff1493">(Login to see this go up! )</p>
+      </div>
+      <br/>
+      <div class="row">
+          <div>
+              <h3>{{product.body}}</h3>
+          </div>
+      </div>
+      <br/>
+      <div class="row">
+          <div>
+              <p>created by {{product.user_current.username}}</p>
+          </div>
+      </div>
+      <br/>
+    </div>
+</body>
+{% endblock %}

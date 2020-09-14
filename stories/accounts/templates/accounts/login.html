@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block content %} <!-- the content inside this goes to base template -->
+{% if error %}
+{{error}}
+<br />
+<br />
+{% endif %}
+<br />
+<br />
+<style>
+  #ip1 
+  {
+    outline:none;
+    border: 1px solid lightgray;
+    border-top:transparent;
+    border-left:transparent;
+    border-right:transparent;
+    /* border-radius: 10px; */
+    width: 250px;
+    height: 50px; 
+    background: transparent;
+    padding-left: 20px;
+    text-align: left;
+    color: #13232f
+  }
+  #ip1:focus{
+    border-bottom: 1px solid #13232f;
+  }
+  .card 
+  {
+    display: flex;
+    height: 40%;
+    width: 50%;
+    border-radius: 10px;
+    /*   margin-left: -50px; */
+    transition: 0.4s ease-out;
+    position: relative;
+    box-shadow: 0rem 1rem 1rem lightgray;
+    border: 1px solid #13232f;
+  }
+  .btn
+  {
+    background: transparent;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    outline:none;
+    border:1px solid;
+    color: #13232f
+  }
+  .btn:hover
+  {
+    color: white;
+    border:1px solid #13232f;
+    background: #13232f
+  }
+  .footer{
+    visibility: hidden;
+  }
+</style>
+<br />
+<div align="center">
+  <p style="color: red">{{error}}</p>
+  <div class="card">
+    <br /> 
+    <h1 class="div3"><font face="Colleged" color="#13232f">SIGN IN</font></h1>
+    <hr style="background-color: #13232f;opacity: 0.5;">
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %} 
+      <br />
+      <input type="text" name="username" id="ip1" placeholder="username"/>
+      <br />
+      <br />
+      <br />
+      <input type="password" name="password" id="ip1" placeholder="password"/>
+      <br />
+      <br />
+      <br />
+      <input class="btn btn-primary" type="submit" value="Login" />
+      <br />
+      <br />
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

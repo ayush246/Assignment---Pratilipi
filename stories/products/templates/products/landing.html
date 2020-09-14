@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %} <!-- the content inside this goes to base template -->
+{% load staticfiles %}
+<style>
+  p 
+  {
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center
+  }
+  .p2 
+  {
+      text-align: center
+  }
+  .card 
+  {
+      width: 45%;
+      padding: 15px;
+      display: flex;
+      position: relative;
+      transition: 0.3s;
+      border-radius: 5px;
+      box-shadow: 0rem 1rem 1rem lightgray;
+      border: 1px solid #13232f;
+  }
+  .footer
+  {
+      visibility: hidden;
+  }
+</style>
+<br />
+<br />
+<div class="card">
+  <div class="container" align="left">
+      <p class="p2"><img src="{% static 'ig2.png' %}" height=80 width=80 class="d-inline-block align-top" /></p>
+      <p><font face="Colleged" size="5">Share stories from across the net</font></p>
+  </div>
+</div>
+<br />
+<br />
+<div class="container" align="right">
+<div class="card">
+  <div class="container" align="right">
+      <p class="p2"><img src="{% static 'i1.png' %}" height=80 width=80 class="d-inline-block align-top" /></p>
+      <p><font face="Colleged" size="5">Read stories shared by other users</font></p>
+  </div>
+</div>
+</div>
+<br />
+<br />
+<div class="card">
+  <div class="container" align="left">
+      <p class="p2"><img src="{% static 'ig3.png' %}" height=80 width=80 class="d-inline-block align-top" /></p>
+      <p><font face="Colleged" size="5">View total / current users for a story</font></p>
+  </div>
+</div>
+<br />
+<br />
+{% endblock %}
