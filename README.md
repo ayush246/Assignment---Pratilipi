@@ -1,7 +1,5 @@
 # Assignment---Pratilipi
 
-Website deployed at https://ayushpratilipi.herokuapp.com/
-
 (screenshots provided at end of readme)
 
 ### Required tasks :
